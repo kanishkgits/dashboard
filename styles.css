@@ -1,3 +1,12 @@
+@font-face {
+    font-family: stranger;
+    src: url(fonts/BruceforeverRegular-5y5zB.otf);
+}
+@font-face {
+    font-family: one-piece;
+    src: url(fonts/OnePiece-zAqL.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +20,8 @@
 .pfp img{
     border-radius: 50%;
     height: 250px;
-    padding: 2rem;
+    margin: 2rem;
+    border: 5px solid white;
 }
 
 .container{
@@ -21,7 +31,7 @@
 }
 
 .sidebar{
-    background: url(images/sidebarbg.jpg);
+    background: linear-gradient(rgba(78, 78, 78, 0.5), rgba(29, 29, 29, 0.5)), url(images/sidebarbg.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -29,12 +39,15 @@
     grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
+    font-family: stranger;
 }
 
 .header{
     background-image: linear-gradient(rgba(78, 78, 78, 0.5), rgba(29, 29, 29, 0.5)), url(images/headerbg.png);
     background-size: cover;
     color: white;
+    text-shadow: 2px 2px 4px black;
+    font-family: stranger;
 }
 
 .pfp{
@@ -47,8 +60,18 @@
     padding: 2rem;
     padding-bottom: 2rem;
 }
-h2, h4, h5{
+h1, h4, h5{
     padding-bottom: 1rem;
+}
+
+h1{
+    font-size: 5rem;
+}
+h4{
+    font-size: 2rem;
+}
+h5{
+    font-size: 1rem;
 }
 
 ul{
@@ -65,5 +88,47 @@ li{
     align-items: center;
 }
 .projects{
+    background-image: url(images/projectsbg.png);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    color: white;
+}
 
+.project{
+    padding: 1rem;
+    font-family: stranger;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.arka{
+    grid-column: 1 / 3;
+}
+
+a{
+    color: cadetblue;
+    font-size: 1.2rem;
+}
+
+.etch{
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+}
+
+.calculator{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.odin-recipes{
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+}
+
+.landing-page{
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
 }
